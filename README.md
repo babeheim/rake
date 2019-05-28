@@ -2,12 +2,12 @@
 rake architecture for simple reproducible research in R
 ============
 
-`rake` is a simple, lightweight pipeline for developing reproducible research in R.
+`rake` is a simple, lightweight pipeline for organizing reproducible research in R.
 
 The key features:
 
 - each analysis is broken down into discrete chapters which execute in sequence
-- each chapter has a defined `input`, which it cannot modify, and produces `output`. this means chapters can repeatedly, or run out of order, so long as their input is correct
+- each chapter has a defined `input`, which it cannot modify, and produces `output`. 
 - a single overview R script, akin to a GNU Makefile, which takes the `output` from one chapter and passes it to the next, as appropriate, then runs that chapter's scripts
 - all project dependencies and global variables are stored in a `project_support.r` file which is loaded first, to indicate immediately if problems arise
 
@@ -74,7 +74,9 @@ analysis/
 
 ```
 
-One of the major advantages is that there's very little confusion about the flow of code; the only things a chapter's code can 'see' is inside `input/`. 
+One of the major advantages is that there's very little confusion about the flow of code; the only things a chapter's code can 'see' is inside `input/`.
+
+this means chapters can repeatedly, or run out of order, so long as their input is correct
 
 It's easy to write multiple chapters at once, even with multiple people working on them.
 
@@ -208,8 +210,12 @@ save_temp <- FALSE
 
 Most of my recent projects use rake architecture, which is where I've developed it over the years. It's not perfect, but so far i've been able to create and re-create my results on past projects since 2011.
 
+Here they are:
 
-pimbwe-wealth-mortality
-moralizing-gods-reanalysis
-mosuo-ppr
-go-firstmove # this one uses Rmd to write up the pdf based on the computational results
+- [pimbwe-wealth-mortality](https://github.com/babeheim/pimbwe-wealth-mortality)
+
+- [moralizing-gods-reanalysis](https://github.com/babeheim/moralizing-gods-reanalysis)
+
+- [mosuo-ppr](https://github.com/babeheim/mosuo-ppr)
+
+- [go-firstmove](https://github.com/babeheim/go-firstmove) # this one uses Rmd to write up the pdf based on the computational results
