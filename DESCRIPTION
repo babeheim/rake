@@ -1,0 +1,9 @@
+Package: rake
+Title: Lightweight reproducible workflow in R
+Version: 0.0.0.9000
+Authors@R: person("Bret", "Beheim", email = "beheim@gmail.com", role = c("aut", "cre"))
+Description: The rake package organizes a quantitative workflow for reproducible analyses as a series of modules, each with clearly organized inputs and outputs.
+Depends: R (>= 3.5.1)
+License: Creative Commons License CC BY-NC-SA 4.0
+Encoding: UTF-8
+LazyData: true
